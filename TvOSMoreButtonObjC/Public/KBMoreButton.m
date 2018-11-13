@@ -326,9 +326,7 @@
     CGSize labelSize = self.label.bounds.size;
     NSString *trailingText = [NSString stringWithFormat:@" %@", self.trailingText];
     
-    self.label.attributedText = [self.text attributedStringByTruncatingToSize:labelSize attributes:self.textAttributes trailingString:trailingText trailingStringAttributes:self.trailingTextAttributes];
-    
-    //self.label.attributedText = [self.text attributedStringByTruncatingToSize:labelSize ellipsesString:self.ellipsesString trailingString:trailingText attributes:self.textAttributes trailingStringAttributes:self.trailingTextAttributes];
+    self.label.attributedText = [self.text attributedStringByTruncatingToSize:labelSize ellipsesString:self.ellipsesString trailingString:trailingText attributes:self.textAttributes trailingStringAttributes:self.trailingTextAttributes];
     
     self.isFocusable = true;
     

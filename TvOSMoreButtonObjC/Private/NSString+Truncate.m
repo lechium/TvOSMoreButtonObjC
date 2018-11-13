@@ -141,6 +141,10 @@
                                                  trailingString:(NSString *)trailingString
                                        trailingStringAttributes:(NSDictionary *)trailingStringAttributes {
     
+    
+    if (![self willFitToSize:size trailingString:@"" attributes:attributes]) {
+        
+    
     NSInteger indexOfLastCharacterThatFits = [self binarySearchForStringIndexThatFitsSize:size attributes:attributes minIndex:0 maxIndex:self.length trailingString:trailingString ellipsesString:ellipsesString];
     
     NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:ellipsesString];
@@ -149,6 +153,9 @@
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:subString attributes:attributes];
     [string appendAttributedString:[[NSAttributedString alloc] initWithString:trailingString attributes:trailingStringAttributes]];
     return string;
+    } else {
+        return [[NSAttributedString alloc] initWithString:self attributes:attributes];
+    }
 }
 
 
