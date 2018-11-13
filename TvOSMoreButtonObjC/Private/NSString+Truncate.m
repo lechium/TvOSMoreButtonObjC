@@ -66,41 +66,6 @@
     
 }
 
-/*
- TruncationModeBinarySearch - using 0 and N as starting indices, where N is the length of the string, perform a binary search that maintains the invariants that:
- 
- - height at minIndex <= size.height
- - height at maxIndex > size.height
- 
- Returns minIndex when minIndex and maxIndex are adjacent
- 
- Performance: log(N)
- */
-- (NSAttributedString *)stringUsingBinarySearchToTruncateToSize:(CGSize)size
-                                                     attributes:(NSDictionary *)attributes
-                                                 trailingString:(NSString *)trailingString
-                                                          color:(UIColor *)color {
-    
-    if (![self willFitToSize:size trailingString:@"" attributes:attributes]) {
-        
-        NSInteger indexOfLastCharacterThatFits = [self binarySearchForStringIndexThatFitsSize:size attributes:attributes minIndex:0 maxIndex:self.length trailingString:trailingString];
-        
-        indexOfLastCharacterThatFits-= 3;
-        
-        NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:@"…"];
-        
-        
-        NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:subString attributes:attributes];
-        [string appendAttributedString:[[NSAttributedString alloc] initWithString:trailingString attributes:@{
-                                                                                                              NSForegroundColorAttributeName: color,
-                                                                                                              NSFontAttributeName: attributes[NSFontAttributeName]
-                                                                                                              }]];
-        return string;
-    } else {
-        return [[NSAttributedString alloc] initWithString:self attributes:attributes];
-    }
-    
-}
 
 - (NSInteger)binarySearchForStringIndexThatFitsSize:(CGSize)size attributes:(NSDictionary *)attributes minIndex:(NSInteger)minIndex maxIndex:(NSInteger)maxIndex trailingString:(NSString *)trailingString {
     /*
