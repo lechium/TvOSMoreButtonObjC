@@ -29,7 +29,7 @@
     };
     
     //self.testButton.ellipsesString = @"……";
-    self.testButton.textColor = [UIColor whiteColor];
+    //self.testButton.textColor = [UIColor whiteColor];
     
 }
 

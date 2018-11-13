@@ -79,7 +79,7 @@
 #pragma mark KVO
 
 - (NSArray *)observableKeypaths {
-    return [NSArray arrayWithObjects:@"trailingText", @"ellipsesString", @"trailingTextColor", @"trailingTextfont",@"font", @"textColor", nil];
+    return [NSArray arrayWithObjects:@"trailingText", @"ellipsesString", @"trailingTextColor", @"trailingTextfont",@"font", @"textColor", @"text", nil];
 }
 
 
