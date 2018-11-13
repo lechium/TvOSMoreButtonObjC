@@ -20,12 +20,4 @@
                                   trailingStringAttributes:(NSDictionary *)trailingStringAttributes;
 
 
-
-- (NSAttributedString *)attributedStringByTruncatingToSize:(CGSize)size
-                                                attributes:(NSDictionary *)attributes
-                                            trailingString:(NSString *)trailingString
-                                  trailingStringAttributes:(NSDictionary *)trailingStringAttributes;
-
-
-
 @end

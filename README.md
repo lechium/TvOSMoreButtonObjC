@@ -1,11 +1,9 @@
 # TvOSMoreButtonObjC
 Objetive-C port of https://github.com/cgoldsby/TvOSMoreButton
 
-Currently ellipses string being customized isn't currently supported, in the course of trying to add that functionality I broke something in the size detection code and rather than figuring that out I reverted to a state that worked, but was missing some functionality.
+I've noticed issues getting the localized strings to work when I use this as a framework in nitoTV but it works fine in the provided SampleApp target. Theres a known "bug" there of some sort, but I'm not sure what it is yet.
 
-I've also noticed issues getting the localized strings to work when I use this as a framework in nitoTV but it works fine in the provided SampleApp target. Theres a known "bug" there of some sort, but I'm not sure what it is yet.
-
-If this port becomes popular I will make it into a cocoapod and debug why some localizaton issues arent working, but at very least I will (eventually) take time to clean up the code and get custom ellipses working. For now this is the best I can offer.
+If this port becomes popular I will make it into a cocoapod and debug why some localizaton issues arent working.
 
 Some of the AutoLayout code was inspired by PureLayout, a great obj-c helper library. I also took some ideas of SVProgressHUD re: KVO. Not that it was needed but made for some easier copy pasta.
 
