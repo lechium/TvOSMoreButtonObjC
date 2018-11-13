@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32058089219A8EE700B6503D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3205807E219A8E4D00B6503D /* Localizable.strings */; };
+		32058094219A917200B6503D /* TvOSMoreButtonObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 32058092219A917200B6503D /* TvOSMoreButtonObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32058097219A917200B6503D /* TvOSMoreButtonObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32058090219A917200B6503D /* TvOSMoreButtonObjC.framework */; };
+		32058098219A917200B6503D /* TvOSMoreButtonObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32058090219A917200B6503D /* TvOSMoreButtonObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3205809D219A918700B6503D /* KBBundleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 32058076219A84A500B6503D /* KBBundleLoader.m */; };
+		3205809F219A918700B6503D /* NSString+Truncate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08FB219A1FC7003AB8E1 /* NSString+Truncate.m */; };
+		320580A1219A918700B6503D /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08F5219A0033003AB8E1 /* UIView+AutoLayout.m */; };
+		320580A2219A919700B6503D /* KBMoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08F8219A1FBF003AB8E1 /* KBMoreButton.m */; };
+		320580A3219A94DD00B6503D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3205807E219A8E4D00B6503D /* Localizable.strings */; };
+		320580A4219A953F00B6503D /* KBMoreButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AA08F7219A1FBF003AB8E1 /* KBMoreButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32AA08E32199FE90003AB8E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08E22199FE90003AB8E1 /* AppDelegate.m */; };
+		32AA08E62199FE90003AB8E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08E52199FE90003AB8E1 /* ViewController.m */; };
+		32AA08E92199FE90003AB8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AA08E72199FE90003AB8E1 /* Main.storyboard */; };
+		32AA08EB2199FE92003AB8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AA08EA2199FE92003AB8E1 /* Assets.xcassets */; };
+		32AA08EE2199FE92003AB8E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA08ED2199FE92003AB8E1 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32058095219A917200B6503D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32AA08D62199FE90003AB8E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3205808F219A917200B6503D;
+			remoteInfo = TvOSMoreButtonObjC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3205809C219A917200B6503D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				32058098219A917200B6503D /* TvOSMoreButtonObjC.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32058075219A84A500B6503D /* KBBundleLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KBBundleLoader.h; sourceTree = "<group>"; };
+		32058076219A84A500B6503D /* KBBundleLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KBBundleLoader.m; sourceTree = "<group>"; };
+		3205807F219A8E4D00B6503D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058080219A8E4D00B6503D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058081219A8E4D00B6503D /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		32058082219A8E4D00B6503D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058083219A8E4D00B6503D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058084219A8E4D00B6503D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058085219A8E4D00B6503D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058086219A8E4D00B6503D /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058087219A8E4D00B6503D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058088219A8E4D00B6503D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3205808A219A8EE800B6503D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		32058090219A917200B6503D /* TvOSMoreButtonObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvOSMoreButtonObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32058092219A917200B6503D /* TvOSMoreButtonObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TvOSMoreButtonObjC.h; sourceTree = "<group>"; };
+		32058093219A917200B6503D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32AA08DE2199FE90003AB8E1 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AA08E12199FE90003AB8E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		32AA08E22199FE90003AB8E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		32AA08E42199FE90003AB8E1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		32AA08E52199FE90003AB8E1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32AA08E82199FE90003AB8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32AA08EA2199FE92003AB8E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32AA08EC2199FE92003AB8E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32AA08ED2199FE92003AB8E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32AA08F4219A0033003AB8E1 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		32AA08F5219A0033003AB8E1 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		32AA08F7219A1FBF003AB8E1 /* KBMoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBMoreButton.h; sourceTree = "<group>"; };
+		32AA08F8219A1FBF003AB8E1 /* KBMoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBMoreButton.m; sourceTree = "<group>"; };
+		32AA08FA219A1FC7003AB8E1 /* NSString+Truncate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Truncate.h"; sourceTree = "<group>"; };
+		32AA08FB219A1FC7003AB8E1 /* NSString+Truncate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Truncate.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3205808C219A917200B6503D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32AA08DB2199FE90003AB8E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32058097219A917200B6503D /* TvOSMoreButtonObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32058073219A829000B6503D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				32058075219A84A500B6503D /* KBBundleLoader.h */,
+				32058076219A84A500B6503D /* KBBundleLoader.m */,
+				32AA08FA219A1FC7003AB8E1 /* NSString+Truncate.h */,
+				32AA08FB219A1FC7003AB8E1 /* NSString+Truncate.m */,
+				32AA08F4219A0033003AB8E1 /* UIView+AutoLayout.h */,
+				32AA08F5219A0033003AB8E1 /* UIView+AutoLayout.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		32058074219A829800B6503D /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				32AA08F7219A1FBF003AB8E1 /* KBMoreButton.h */,
+				32AA08F8219A1FBF003AB8E1 /* KBMoreButton.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		3205807D219A8E4D00B6503D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3205807E219A8E4D00B6503D /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32058091219A917200B6503D /* TvOSMoreButtonObjC */ = {
+			isa = PBXGroup;
+			children = (
+				32058092219A917200B6503D /* TvOSMoreButtonObjC.h */,
+				32058093219A917200B6503D /* Info.plist */,
+			);
+			path = TvOSMoreButtonObjC;
+			sourceTree = "<group>";
+		};
+		32AA08D52199FE90003AB8E1 = {
+			isa = PBXGroup;
+			children = (
+				32AA08E02199FE90003AB8E1 /* TvOSMoreButtonObjC */,
+				32058091219A917200B6503D /* TvOSMoreButtonObjC */,
+				32AA08DF2199FE90003AB8E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32AA08DF2199FE90003AB8E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32AA08DE2199FE90003AB8E1 /* SampleApp.app */,
+				32058090219A917200B6503D /* TvOSMoreButtonObjC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32AA08E02199FE90003AB8E1 /* TvOSMoreButtonObjC */ = {
+			isa = PBXGroup;
+			children = (
+				32058073219A829000B6503D /* Private */,
+				32058074219A829800B6503D /* Public */,
+				32AA08E12199FE90003AB8E1 /* AppDelegate.h */,
+				32AA08E22199FE90003AB8E1 /* AppDelegate.m */,
+				32AA08E42199FE90003AB8E1 /* ViewController.h */,
+				32AA08E52199FE90003AB8E1 /* ViewController.m */,
+				32AA08E72199FE90003AB8E1 /* Main.storyboard */,
+				32AA08EA2199FE92003AB8E1 /* Assets.xcassets */,
+				32AA08EC2199FE92003AB8E1 /* Info.plist */,
+				32AA08ED2199FE92003AB8E1 /* main.m */,
+				3205807D219A8E4D00B6503D /* Resources */,
+			);
+			path = TvOSMoreButtonObjC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3205808D219A917200B6503D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320580A4219A953F00B6503D /* KBMoreButton.h in Headers */,
+				32058094219A917200B6503D /* TvOSMoreButtonObjC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3205808F219A917200B6503D /* TvOSMoreButtonObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32058099219A917200B6503D /* Build configuration list for PBXNativeTarget "TvOSMoreButtonObjC" */;
+			buildPhases = (
+				3205808B219A917200B6503D /* Sources */,
+				3205808C219A917200B6503D /* Frameworks */,
+				3205808D219A917200B6503D /* Headers */,
+				3205808E219A917200B6503D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TvOSMoreButtonObjC;
+			productName = TvOSMoreButtonObjC;
+			productReference = 32058090219A917200B6503D /* TvOSMoreButtonObjC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		32AA08DD2199FE90003AB8E1 /* SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32AA08F12199FE92003AB8E1 /* Build configuration list for PBXNativeTarget "SampleApp" */;
+			buildPhases = (
+				32AA08DA2199FE90003AB8E1 /* Sources */,
+				32AA08DB2199FE90003AB8E1 /* Frameworks */,
+				32AA08DC2199FE90003AB8E1 /* Resources */,
+				3205809C219A917200B6503D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32058096219A917200B6503D /* PBXTargetDependency */,
+			);
+			name = SampleApp;
+			productName = TestApp;
+			productReference = 32AA08DE2199FE90003AB8E1 /* SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32AA08D62199FE90003AB8E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Kevin Bradley";
+				TargetAttributes = {
+					3205808F219A917200B6503D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					32AA08DD2199FE90003AB8E1 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 32AA08D92199FE90003AB8E1 /* Build configuration list for PBXProject "TvOSMoreButtonObjC" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				"es-MX",
+				es,
+				fr,
+				it,
+				ja,
+				nb,
+				nl,
+				ru,
+			);
+			mainGroup = 32AA08D52199FE90003AB8E1;
+			productRefGroup = 32AA08DF2199FE90003AB8E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32AA08DD2199FE90003AB8E1 /* SampleApp */,
+				3205808F219A917200B6503D /* TvOSMoreButtonObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3205808E219A917200B6503D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320580A3219A94DD00B6503D /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32AA08DC2199FE90003AB8E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32AA08EB2199FE92003AB8E1 /* Assets.xcassets in Resources */,
+				32058089219A8EE700B6503D /* Localizable.strings in Resources */,
+				32AA08E92199FE90003AB8E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3205808B219A917200B6503D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3205809D219A918700B6503D /* KBBundleLoader.m in Sources */,
+				320580A2219A919700B6503D /* KBMoreButton.m in Sources */,
+				320580A1219A918700B6503D /* UIView+AutoLayout.m in Sources */,
+				3205809F219A918700B6503D /* NSString+Truncate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32AA08DA2199FE90003AB8E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32AA08E62199FE90003AB8E1 /* ViewController.m in Sources */,
+				32AA08EE2199FE92003AB8E1 /* main.m in Sources */,
+				32AA08E32199FE90003AB8E1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32058096219A917200B6503D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3205808F219A917200B6503D /* TvOSMoreButtonObjC */;
+			targetProxy = 32058095219A917200B6503D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3205807E219A8E4D00B6503D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3205807F219A8E4D00B6503D /* de */,
+				32058080219A8E4D00B6503D /* en */,
+				32058081219A8E4D00B6503D /* es-MX */,
+				32058082219A8E4D00B6503D /* es */,
+				32058083219A8E4D00B6503D /* fr */,
+				32058084219A8E4D00B6503D /* it */,
+				32058085219A8E4D00B6503D /* ja */,
+				32058086219A8E4D00B6503D /* nb */,
+				32058087219A8E4D00B6503D /* nl */,
+				32058088219A8E4D00B6503D /* ru */,
+				3205808A219A8EE800B6503D /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		32AA08E72199FE90003AB8E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32AA08E82199FE90003AB8E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3205809A219A917200B6503D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9EUFEA5U7G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TvOSMoreButtonObjC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nito.com.TvOSMoreButtonObjC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3205809B219A917200B6503D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9EUFEA5U7G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TvOSMoreButtonObjC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nito.com.TvOSMoreButtonObjC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		32AA08EF2199FE92003AB8E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		32AA08F02199FE92003AB8E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32AA08F22199FE92003AB8E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9EUFEA5U7G;
+				INFOPLIST_FILE = "$(SRCROOT)/TvOSMoreButtonObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextiva.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		32AA08F32199FE92003AB8E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9EUFEA5U7G;
+				INFOPLIST_FILE = "$(SRCROOT)/TvOSMoreButtonObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextiva.TestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32058099219A917200B6503D /* Build configuration list for PBXNativeTarget "TvOSMoreButtonObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3205809A219A917200B6503D /* Debug */,
+				3205809B219A917200B6503D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32AA08D92199FE90003AB8E1 /* Build configuration list for PBXProject "TvOSMoreButtonObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32AA08EF2199FE92003AB8E1 /* Debug */,
+				32AA08F02199FE92003AB8E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32AA08F12199FE92003AB8E1 /* Build configuration list for PBXNativeTarget "SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32AA08F22199FE92003AB8E1 /* Debug */,
+				32AA08F32199FE92003AB8E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32AA08D62199FE90003AB8E1 /* Project object */;
+}
