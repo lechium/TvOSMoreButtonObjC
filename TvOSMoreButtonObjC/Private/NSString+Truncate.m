@@ -22,7 +22,7 @@
 
 
 - (BOOL)willFitToSize:(CGSize)size trailingString:(NSString *)trailingString attributes:(NSDictionary *)attributes {
-    return [[NSString stringWithFormat:@"%@...%@", self, trailingString] boundingRectWithSize:CGSizeMake(size.width, CGFLOAT_MAX)
+    return [[NSString stringWithFormat:@"%@…%@", self, trailingString] boundingRectWithSize:CGSizeMake(size.width, CGFLOAT_MAX)
                                                                                       options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
                                                                                    attributes:attributes
                                                                                       context:nil].size.height <= size.height;
@@ -38,114 +38,10 @@
     
 }
 
-/*
- Uses one of three truncation modes to truncate string and append a trailing string.
- 
- - EMTruncationModeSubtraction: subtracts a character from the string until it fits the constraining size.
- - EMTruncationModeAddition: appends a character to the string until it does not fit the constraining size, then constructs the string using the index of the last character that fit.
- - EMTruncationModeBinarySearch: uses a binary search to find the lower bound.
- 
- The font size of trailing string is assumed to be the same as the font size of the string being truncated, or calculations would be too funny to calculate.
- */
-- (NSAttributedString *)attributedStringByTruncatingToSize:(CGSize)size
-                                                attributes:(NSDictionary *)attributes
-                                            trailingString:(NSString *)trailingString
-                                                     color:(UIColor *)color
-                                            truncationMode:(EMTruncationMode)truncationMode {
-    switch (truncationMode) {
-        case EMTruncationModeAddition: {
-            return [self stringUsingAdditionToTruncateToSize:size attributes:attributes trailingString:trailingString color:color];
-            break;
-        }
-        case EMTruncationModeSubtraction: {
-            return [self stringUsingSubtractionToTruncateToSize:size attributes:attributes trailingString:trailingString color:color];
-            break;
-        }
-        case EMTruncationModeBinarySearch: {
-            return [self stringUsingBinarySearchToTruncateToSize:size attributes:attributes trailingString:trailingString color:color];
-            break;
-        }
-        default:
-            // Default to binary search
-            return [self stringUsingBinarySearchToTruncateToSize:size attributes:attributes trailingString:trailingString color:color];
-            break;
-    }
-    
-}
+
 
 #pragma mark - Truncation methods
 
-/*
- TruncationModeSubtraction
- 
- Subtracts one character at a time from string (+ trailingString). Stops when height of bounds fits the constraining height and uses index to reconstruct string that fits.
- 
- Performance: O(N), where N is length of the string
- 
- (this is a horrible method to use if you have long strings to truncate).
- */
-- (NSAttributedString *)stringUsingSubtractionToTruncateToSize:(CGSize)size
-                                                    attributes:(NSDictionary *)attributes
-                                                trailingString:(NSString *)trailingString
-                                                         color:(UIColor *)color {
-    
-    if (![self willFitToSize:size trailingString:@"" attributes:attributes]) {
-        
-        NSMutableString *string = [self mutableCopy];
-        NSRange rangeOfLastCharacter = {string.length - 1, 1};
-        
-        while (![string willFitToSize:size trailingString:trailingString attributes:attributes]) {
-            [string deleteCharactersInRange:rangeOfLastCharacter];
-            rangeOfLastCharacter.location--;
-        }
-        
-        NSInteger indexOfLastCharacter = rangeOfLastCharacter.location + rangeOfLastCharacter.length;
-        
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[string substringToIndex:indexOfLastCharacter] attributes:attributes];
-        [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:trailingString attributes:@{
-                                                                                                                        NSForegroundColorAttributeName: color,
-                                                                                                                        NSFontAttributeName: attributes[NSFontAttributeName]
-                                                                                                                        }]];
-        return attributedString;
-    } else {
-        return [[NSAttributedString alloc] initWithString:self attributes:attributes];
-    }
-}
-
-
-/*
- TruncationModeAddition - adds one character at a time from string (+ trailingString). Stops when height of bounds exceeds the constraining height and uses index to reconstruct string that fits.
- 
- Performance: constant in the size parameter
- */
-
-- (NSAttributedString *)stringUsingAdditionToTruncateToSize:(CGSize)size
-                                                 attributes:(NSDictionary *)attributes
-                                             trailingString:(NSString *)trailingString
-                                                      color:(UIColor *)color {
-    
-    if (![self willFitToSize:size trailingString:@"" attributes:attributes]) {
-        
-        NSMutableString *stringThatFits = [@"" mutableCopy];
-        NSRange range = {0, 1};
-        
-        while ([stringThatFits willFitToSize:size trailingString:trailingString attributes:attributes]) {
-            [stringThatFits insertString:[self substringWithRange:range] atIndex:range.location];
-            range.location++;
-        }
-        
-        NSInteger indexOfLastCharacterThatFits = range.location - range.length;
-        
-        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[stringThatFits substringToIndex:indexOfLastCharacterThatFits] attributes:attributes];
-        [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:trailingString attributes:@{
-                                                                                                                        NSForegroundColorAttributeName: color,
-                                                                                                                        NSFontAttributeName: attributes[NSFontAttributeName]
-                                                                                                                        }]];
-        return attributedString;
-    } else {
-        return [[NSAttributedString alloc] initWithString:self attributes:attributes];
-    }
-}
 
 - (NSAttributedString *)stringUsingBinarySearchToTruncateToSize:(CGSize)size
                                                      attributes:(NSDictionary *)attributes
@@ -158,7 +54,7 @@
         
         //indexOfLastCharacterThatFits-= 3;
         
-        NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:@"..."];
+        NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:@"…"];
         
         
         NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:subString attributes:attributes];
@@ -191,7 +87,7 @@
         
         indexOfLastCharacterThatFits-= 3;
         
-        NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:@"..."];
+        NSString *subString = [[self substringToIndex:indexOfLastCharacterThatFits] stringByAppendingString:@"…"];
         
         
         NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:subString attributes:attributes];
