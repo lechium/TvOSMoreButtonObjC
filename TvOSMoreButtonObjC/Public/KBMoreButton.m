@@ -47,11 +47,26 @@
 
 - (NSDictionary *)textAttributes {
     
+    if (self.textColor == nil){
+        self.textColor = [UIColor blackColor];
+    }
+    if (self.font == nil){
+        self.font = [UIFont systemFontOfSize:25];
+    }
+    
     return @{NSForegroundColorAttributeName: self.textColor, NSFontAttributeName: self.font};
     
 }
 
 - (NSDictionary *)trailingTextAttributes {
+    
+    if (self.trailingTextColor == nil){
+        self.trailingTextColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    }
+    
+    if (self.trailingTextfont == nil) {
+        self.trailingTextfont = [UIFont boldSystemFontOfSize:18];
+    }
     
     return @{NSForegroundColorAttributeName: self.trailingTextColor, NSFontAttributeName: self.trailingTextfont};
     

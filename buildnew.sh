@@ -8,6 +8,11 @@ OS="appletvos"
 #xcodebuild -sdk iphonesimulator
 #xcodebuild -sdk iphoneos
 
+if [ -d "build" ]; then
+    echo "removing old build folder..."
+    rm -rf build
+fi
+
 xcodebuild -sdk $SIM
 xcodebuild -sdk $OS
 
@@ -19,7 +24,7 @@ RLS_PATH="build/Release-$OS"
 
 echo "$RLS_PATH"
 
-cd $RLS_PATH
+pushd $RLS_PATH
 
 echo $pwd
 
@@ -42,6 +47,14 @@ uniname=$outputfile.uni
 fwpath=$pwd/build/Release-$OS/$name.framework
 incpath=$pwd/build/Release-$OS/include
 fullpath=$pwd/build/Release-$OS/$uniname
+
+echo "####"
+echo "outputfile: $outputfile"
+echo "uniname: $uniname"
+echo "fwpath: $fwpath"
+echo "incpath: $incpath"
+echo "fullpath: $fullpath"
+echo "####"
 
 if [ -z "$name" ]; then
 
