@@ -240,7 +240,7 @@
     
     self.focusedView = [[UIView alloc] initWithAutoLayout];
     self.focusedView.layer.cornerRadius = self.cornerRadius;
-    self.focusedView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.focusedView.layer.shadowColor = self.shadowColor;
     self.focusedView.layer.shadowRadius = self.shadowRadius;
     [self addSubview:self.focusedView];
     [self.focusedView pinEdgesToSuperviewEdges];
