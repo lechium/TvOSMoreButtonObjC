@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSString *ellipsesString;
 @property (nonatomic, strong) NSString *trailingText;
 @property (nonatomic, strong) UIColor *trailingTextColor;
-@property (nonatomic, strong) UIFont *trailingTextfont;
+@property (nonatomic, strong) UIFont *trailingTextFont;
 @property (readwrite, assign) CGFloat pressAnimationDuration;
 @property (readwrite, assign) CGFloat labelMargin;
 @property (readwrite, assign) CGFloat cornerRadius;

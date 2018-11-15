@@ -12,6 +12,10 @@
 
 @interface NSString (Truncate)
 
+- (BOOL)willFitToSize:(CGSize)size
+       ellipsesString:(NSString*)ellipsesString
+       trailingString:(NSString *)trailingString
+           attributes:(NSDictionary *)attributes;
 
 - (NSAttributedString *)attributedStringByTruncatingToSize:(CGSize)size
                                             ellipsesString:(NSString *)ellipsesString

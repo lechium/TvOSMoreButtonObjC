@@ -32,7 +32,7 @@
     self.ellipsesString = @"…";
     self.trailingText = [NSLocalizedStringFromTableInBundle(@"TvOSMoreButton.More.Text", nil, KBBundleLoader.mainBundle, @"Text that appears after a long description in a label.") uppercaseString];
     self.trailingTextColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-    self.trailingTextfont = [UIFont boldSystemFontOfSize:18];
+    self.trailingTextFont = [UIFont boldSystemFontOfSize:18];
     self.pressAnimationDuration = 0.1;
     self.labelMargin = 12.0f;
     self.cornerRadius = 10.0;
@@ -64,11 +64,11 @@
         self.trailingTextColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
     }
     
-    if (self.trailingTextfont == nil) {
-        self.trailingTextfont = [UIFont boldSystemFontOfSize:18];
+    if (self.trailingTextFont == nil) {
+        self.trailingTextFont = [UIFont boldSystemFontOfSize:18];
     }
     
-    return @{NSForegroundColorAttributeName: self.trailingTextColor, NSFontAttributeName: self.trailingTextfont};
+    return @{NSForegroundColorAttributeName: self.trailingTextColor, NSFontAttributeName: self.trailingTextFont};
     
 }
 
@@ -94,7 +94,7 @@
 #pragma mark KVO
 
 - (NSArray *)observableKeypaths {
-    return [NSArray arrayWithObjects:@"trailingText", @"ellipsesString", @"trailingTextColor", @"trailingTextfont",@"font", @"textColor", @"text", nil];
+    return [NSArray arrayWithObjects:@"trailingText", @"ellipsesString", @"trailingTextColor", @"trailingTextFont",@"font", @"textColor", @"text", nil];
 }
 
 
@@ -343,8 +343,8 @@
     
     self.label.attributedText = [self.text attributedStringByTruncatingToSize:labelSize ellipsesString:self.ellipsesString trailingString:trailingText attributes:self.textAttributes trailingStringAttributes:self.trailingTextAttributes];
     
-    self.isFocusable = true;
-    
+    self.isFocusable = ![self.text willFitToSize:labelSize ellipsesString:self.ellipsesString trailingString:trailingText attributes:self.textAttributes];
+    //isFocusable = !text.willFit(to: labelSize, attributes: textAttributes)
 }
 
 
